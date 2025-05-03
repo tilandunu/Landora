@@ -17,12 +17,15 @@ const Header = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/api/auth/logout', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        'https://landora-production.up.railway.app/api/auth/logout',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await response.json();
 
