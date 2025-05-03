@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'http://localhost:5173', // Your frontend URL
+    origin: 'https://landora-tilans-projects-6b88c227.vercel.app/', // Your frontend URL
     credentials: true, // Allow cookies and credentials
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
