@@ -29,16 +29,19 @@ const AuthPage = () => {
       }
 
       // This would normally be connecting to your backend API
-      const response = await fetch('http://localhost:8080/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: loginForm.username,
-          password: loginForm.password,
-        }),
-      });
+      const response = await fetch(
+        'https://landora-production.up.railway.app/api/auth/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: loginForm.username,
+            password: loginForm.password,
+          }),
+        }
+      );
 
       const data = await response.json();
 
@@ -82,17 +85,20 @@ const AuthPage = () => {
       }
 
       // This would normally be connecting to your backend API
-      const response = await fetch('http://localhost:8080/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: registerForm.username,
-          email: registerForm.email,
-          password: registerForm.password,
-        }),
-      });
+      const response = await fetch(
+        'https://landora-production.up.railway.app/api/auth/register',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: registerForm.username,
+            email: registerForm.email,
+            password: registerForm.password,
+          }),
+        }
+      );
 
       const data = await response.json();
 
