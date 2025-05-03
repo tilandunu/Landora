@@ -55,7 +55,8 @@ const AuthPage = () => {
 
       // Redirect to dashboard or home
       setTimeout(() => {
-        window.location.href = '/home';
+        window.location.href =
+          'https://landora-tilans-projects-6b88c227.vercel.app/home';
       }, 1500);
     } catch (err) {
       setError(err.message);
